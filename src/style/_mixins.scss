@@ -1,0 +1,71 @@
+//@mixin bg-dark {
+//  content: '';
+//  position: absolute;
+//  background: rgba(#000, 0.85);
+//  top: 0;
+//  left: 0;
+//  height: 100%;
+//}
+
+@mixin btn_more ($color-arrow,$color-text){
+  display: flex;
+  max-width: 22em;
+  align-items: center;
+  justify-content: center;
+  color: $color-text;
+  font-size: 0.875rem;
+  line-height: 5;
+  border: 2px solid $color-text;
+
+  i {
+    display: inline-block;
+    width: 40px;
+    height: 1px;
+    background-color: $color-arrow;
+    transform: translateX(9px);
+    margin-left: 1.43em;
+  }
+
+  span {
+    color:$color-arrow;
+
+  }
+}
+
+@mixin line-horizont {
+  position: absolute;
+  width: 44px;
+  height: 4px;
+  background-color: $yellow-text;
+  content: '';
+}
+
+
+@mixin line-vertical {
+  width: 4px;
+  height: 60px;
+  background-color: $yellow-text;
+}
+
+
+@mixin line-gorizont_color ($color){
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: -184px;
+  width: 140px;
+  height: 2px;
+  background-color: $color;
+}
+
+
+
+@mixin bg-word {
+  position: absolute;
+  font-size: 23rem;
+  text-transform: uppercase;
+  color: rgba(190, 166, 124, 0.07);
+  font-weight: bold;
+  line-height: 1.111;
+
+}

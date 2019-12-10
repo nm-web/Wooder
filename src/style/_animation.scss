@@ -1,0 +1,57 @@
+
+.puls {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  100% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+}
+
+.fadeout {
+  animation: fadeout 3s infinite;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+
+  }
+
+  50% {
+    opacity: 0.8;
+
+  }
+
+  100%{
+    opacity: 1;
+    color:$white;
+
+  }
+
+}
+
+
+@keyframes fadeout-color {
+  0% {
+    opacity: 0;
+    color:#1f1d1d;
+
+  }
+
+  50% {
+    opacity: 0.8;
+    color: lightness(#1f1d1d);
+
+  }
+
+  100%{
+    opacity: 1;
+    color:$white;
+
+  }
+
+}

@@ -1,0 +1,28 @@
+
+
+.about {
+  width: 100%;
+  position: relative;
+
+  .content-box {
+    width: 53%;
+  }
+
+  .content-image__text {
+    left: -80%;
+  }
+
+  .content-image {
+    margin-right: -70px;
+  }
+
+  .word-bg {
+    @include bg-word;
+    top: -70%;
+    right: 19%;
+    left: initial;
+    z-index: -1;
+  }
+}
+
+

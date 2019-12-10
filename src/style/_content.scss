@@ -1,0 +1,194 @@
+@import "colors";
+@import "mixins";
+
+.content {
+  width: 100%;
+  margin-top: 72px;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.content-box {
+  width: 62%;
+  margin:80px auto 135px auto;
+  display: flex;
+  @media (max-width: 1300px) {
+    width: 80%;
+
+  }
+  @media (max-width: 1000px) {
+    width: 96%;
+
+  }
+  @media (max-width: 968px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+.content-text {
+  width: 30%;
+  font-size: 0.937rem;
+  margin-left: 184px;
+  align-self: center;
+  margin-right: 50px;
+
+  .line_vertical {
+    @include line-vertical;
+    margin-top: 100px;
+    margin-left: -164px;
+  }
+
+  &__header {
+    font-size: 2.625rem;
+    position: relative;
+
+    &:before {
+      @include line-gorizont_color(#000);
+
+    }
+  }
+
+  &__paragraph {
+    position: relative;
+    &:before {
+      top: 10%;
+      left: -84px;
+      @include line-horizont;
+    }
+  }
+}
+
+.link-more {
+  @include btn_more($yellow-text, #000);
+  border: none;
+  justify-content: left;
+  position: relative;
+  line-height: 0;
+  padding-bottom: 9px;
+
+  &:after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 44px;
+    background-color: $yellow-text;
+    top: 100%;
+    left: 0;
+  }
+}
+
+
+.content-image {
+  width: 60%;
+  position: relative;
+
+  & img {
+    width: 100%;
+    background-size: cover;
+    box-shadow: 0 0 10px #1f1d1d;
+  }
+
+  & .content-image__text {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    font-size: 10.58em;
+    font-weight: bold;
+    color: rgba(208, 208, 208, 0.2);
+    text-transform: uppercase;
+    z-index: 5;
+
+  }
+}
+
+.number-section {
+  position: absolute;
+  top: 40%;
+  color: black;
+  font-size: 2.25em;
+  font-weight: bold;
+  left: 19%;
+
+  & span {
+    color: $yellow-text;
+  }
+
+  .line_vertical {
+    @include line-vertical;
+    position: absolute;
+    left: 18px;
+    margin-top: 100px;
+  }
+
+}
+
+#decor {
+  margin-top: 282px;
+  //width: 62%;
+  position: relative;
+
+  .content-image {
+    width: 60%;
+    &__text {
+      left: -60%;
+    }
+  }
+
+  .content-text {
+      margin-left: 50px;
+
+      text-align: right;
+      margin-right: 184px;
+      width: 30%;
+
+    & .word-bg {
+      @include bg-word;
+      top: -60%;
+      right: -5%;
+    }
+
+    &__header {
+      &:before {
+        left: calc(100% + 40px);
+      }
+    }
+
+    &__paragraph {
+      &:before {
+      left: calc(100% + 40px);
+
+      }
+    }
+
+    .link-more {
+      justify-content: right;
+      width: 184px;
+      margin-right: 0;
+      margin-left: auto;
+
+    }
+
+    .number-section {
+      margin-right: -184px;
+    }
+
+
+    .line_vertical {
+        @include line-vertical;
+        margin-top: 60px;
+
+      }
+
+
+
+  }
+
+
+
+}
+
+

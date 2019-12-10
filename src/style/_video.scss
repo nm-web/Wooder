@@ -1,0 +1,88 @@
+@import "mixins";
+@import "colors";
+
+.section-video {
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/static/image/bg-video1.png");
+  width: 100%;
+  height: 910px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  padding: 5.5em 0;
+  color: white;
+}
+
+.video-content {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  border: 1px solid $yellow-text;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+
+  & .content-box {
+    width: 70%;
+    margin-left: 10%;
+
+    & .content-text {
+      width: 50%;
+      margin-bottom: 1em;
+
+      & h4 {
+        color: $yellow-text;
+        font-size: 3rem;
+        margin: 0 0 1em 0;
+        position: relative;
+        line-height: 1.25;
+
+        &:before {
+          @include line-gorizont_color($white);
+          top: 25%;
+        }
+      }
+
+      & p {
+        position: relative;
+
+        &:before {
+          @include line-horizont;
+          top: 7px;
+          left: -88px;
+
+        }
+      }
+
+      & .slider-btn {
+        @include btn_more($white, $white);
+        margin-top: 2.5em;
+
+        & img {
+          margin-right: 1em;
+        }
+
+      }
+    }
+
+  }
+
+}
+
+.line-vertical {
+
+  @include line-gorizont_color($white);
+  transform: rotate(90deg);
+  right: 100px;
+  left: initial;
+
+}
+
+.video-play {
+
+  & img {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+  }
+}
