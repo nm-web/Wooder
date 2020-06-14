@@ -1,6 +1,4 @@
 @import "../../node_modules/normalize.css/normalize.css";
-git
-
 @import "content";
 @import "colors";
 @import "animation";
@@ -37,7 +35,7 @@ a{
   font-weight: bold;
   display: inline-block;
 }
-//
+
 img {
   display: block;
   z-index: 5;
@@ -58,7 +56,6 @@ h1,h2,h3,h4 {
   letter-spacing: 5px;
   position: relative;
   color: white;
-  //margin-right: 3em;
   z-index: 23;
   @media screen and (max-width: 540px){
     font-size: 1.5rem;
@@ -79,7 +76,7 @@ h1,h2,h3,h4 {
 
 
 footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/static/image/header-slider1.jpg") no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   color: #434343;
@@ -90,12 +87,18 @@ footer {
     align-items: center;
     justify-content: space-around;
 
+    & .date {
+      width: 25%;
+    }
+
     .design {
+      width: 30%;
       & span {
         color:#7d7d7d;
       }
     }
     .logo {
+      width: 33%;
 
       font-weight: bold;
     }

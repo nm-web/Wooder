@@ -198,7 +198,7 @@
 }
 
 .header-left {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/static/image/header-slider1.jpg") no-repeat;
+ background-repeat:  no-repeat;
   background-size: cover;
   height: 95vh;
   width: 54%;
@@ -250,7 +250,7 @@
 
 
 .header-right {
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("/static/image/header-slider2.jpg");
+
   width: 46%;
   height: 99vh;
   background-size: cover;

@@ -42,23 +42,37 @@
     font-size: 2.625rem;
     position: relative;
 
-    &:before {
-      @include line-gorizont_color(#000);
 
+      &:before {
+        @media screen and (min-width: 362px){
+          @include line-gorizont_color(#000);
+
+        }
     }
+
+
   }
 
   &__paragraph {
     position: relative;
 
-    &:before {
-      top: 10%;
-      left: -5.25em;
-      @include line-horizont;
-      @media screen and (max-width:550px){
-        left: -3.25em;
-      }
+
+      &:before {
+
+        @media screen and (min-width: 362px) {
+          top: 10%;
+          left: -5.25em;
+          @include line-horizont;
+
+          @media screen and (max-width: 550px) {
+            left: -3.25em;
+          }
+
+        }
+
     }
+
+
   }
 }
 
@@ -178,7 +192,8 @@
       &:before {
         left: calc(100% + 2.5rem);
         @media screen and (max-width:550px){
-          left: calc(100% + 0.5rem);
+          //left: calc(100% + 0.5rem);
+          display: none;
         }
       }
     }
