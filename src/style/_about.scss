@@ -1,19 +1,19 @@
 
 
-.about {
+#about {
   width: 100%;
   position: relative;
 
-  .content-box {
-    width: 53%;
+  .content-text {
+    transform: translateX(-7em);
+    @media screen and (max-width: 550px){
+      transform: translateX(0);
+    }
   }
 
   .content-image__text {
-    left: -80%;
-  }
-
-  .content-image {
-    margin-right: -70px;
+    right: 60%;
+    left: initial;
   }
 
   .word-bg {

@@ -1,17 +1,13 @@
-@import "colors";
-@import "mixins";
-@import "content";
+//@import "colors";
+//@import "mixins";
+//@import "content";
 
 .quality {
-  margin-top: 53px;
+  margin-top: 10em;
   position: relative;
-  margin-bottom: 153px;
+  margin-bottom: 9.5em;
 
-  .number-section {
-    top: -38%;
-    right: 19%;
-    left: initial;
-  }
+
 
   .word-bg {
     @include bg-word;
@@ -20,17 +16,22 @@
     right: 15%;
     z-index: -1;
   }
-}
 
-.quality-text {
-  width: 30%;
-  text-align: center;
-  margin-right: auto;
-  margin-left: auto;
   & h2 {
     text-transform: uppercase;
     font-size: 3rem;
     margin-bottom: 1.125em;
+    text-align: center;
+  }
+}
+
+.quality-text {
+  width: 50%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  @media screen and (max-width:640px){
+    width: 95%;
   }
 
   & p {
@@ -45,15 +46,17 @@
 }
 
 .quality-video {
-  margin-top: 70px;
+  margin-top: 4.37em;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   .video-box {
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 1em auto;
 
     h3 {
       margin-top: 50px;
@@ -69,7 +72,7 @@
       }
     }
 
-    &__round {
+    &__circle {
       border-radius: 50%;
       width: 260px;
       height: 260px;

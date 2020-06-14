@@ -1,6 +1,9 @@
 @import "../../node_modules/normalize.css/normalize.css";
-//@import "header";
+git
+
 @import "content";
+@import "colors";
+@import "animation";
 @import "header";
 @import "mixins";
 @import "quality";
@@ -19,10 +22,12 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
+
   font-family: 'Montserrat', sans-serif;
   background-color: white;
+  max-width: 1900px;
+  padding: 0 ;
 }
 
 a{
@@ -30,17 +35,21 @@ a{
   color: inherit;
   text-transform: uppercase;
   font-weight: bold;
+  display: inline-block;
 }
 //
 img {
   display: block;
   z-index: 5;
   color: white;
+  object-fit: cover;
 }
 
-h2,h3,h4 {
+h1,h2,h3,h4 {
   text-transform: uppercase;
   font-weight: bold;
+  margin: 0;
+
 }
 
 .logo {
@@ -50,15 +59,21 @@ h2,h3,h4 {
   position: relative;
   color: white;
   //margin-right: 3em;
-
+  z-index: 23;
+  @media screen and (max-width: 540px){
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width: 440px){
+    font-size: 1rem;
+  }
   &:before {
     position: absolute;
     content: '';
-    height: 5px;
-    width: 64px;
+    height: 0.14em;
+    width: 1.7em;
     background-color: #bea67c;
     top: calc(35% + 3px);
-    left: 47px;
+    left: 1.35em;
   }
 }
 
@@ -69,6 +84,7 @@ footer {
   background-position: center center;
   color: #434343;
   padding: 1em 0;
+  margin-top: 1em;
   & .footer-row {
     display: flex;
     align-items: center;

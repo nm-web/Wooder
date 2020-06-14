@@ -14,12 +14,18 @@
   justify-content: center;
   color: $color-text;
   font-size: 0.875rem;
-  line-height: 5;
+  //line-height: 5;
+  padding: 1.42em;
   border: 2px solid $color-text;
+
+  //@media screen and (max-width:768px){
+  //
+  //  max-width: 14em;
+  //}
 
   i {
     display: inline-block;
-    width: 40px;
+    width: 2.5em;
     height: 1px;
     background-color: $color-arrow;
     transform: translateX(9px);
@@ -34,16 +40,16 @@
 
 @mixin line-horizont {
   position: absolute;
-  width: 44px;
-  height: 4px;
+  width: 2.75em;
+  height: 0.25em;
   background-color: $yellow-text;
   content: '';
 }
 
 
 @mixin line-vertical {
-  width: 4px;
-  height: 60px;
+  width: 0.25rem;
+  height: 3rem;
   background-color: $yellow-text;
 }
 
@@ -52,10 +58,13 @@
   position: absolute;
   content: '';
   top: 50%;
-  left: -184px;
-  width: 140px;
+  left: -11rem;
+  width: 8.75rem;
   height: 2px;
   background-color: $color;
+  @media screen and (max-width:550px){
+    left: -9rem;
+  }
 }
 
 
@@ -67,5 +76,11 @@
   color: rgba(190, 166, 124, 0.07);
   font-weight: bold;
   line-height: 1.111;
-
+  margin: 0;
+  @media screen and (max-width: 768px){
+    font-size: 15rem;
+  }
+  @media screen and (max-width:450px){
+    font-size: 10rem;
+  }
 }

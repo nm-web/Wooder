@@ -8,7 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="./static/slick/slick.css" rel="stylesheet" type="text/css">
     <link href="./static/slick/slick-theme.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"
+          type="text/css">
     <link rel="stylesheet" href="./static/css/fontello.css">
 </head>
 
@@ -16,18 +17,20 @@
 <header class="header">
     <div class="header-menu">
         <div class="header-menu__left">
-            <a href="#" class="line">
-                <span></span>
-            </a>
-            <a class="word-menu">menu</a>
+            <div class="mobile-menu">
+                <div class="mobile-menu__line mobile-menu__line--top"></div>
+                <div class="mobile-menu__line mobile-menu__line--middle"></div>
+                <div class="mobile-menu__line mobile-menu__line--bottom"></div>
+            </div>
+            <p class="word-menu">menu</p>
         </div>
         <div class="header-menu__center">
+            <a href="index.html" class="logo">wooder</a>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="page.html" class="logo">wooder</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">products</a></li>
-                    <li><a href="">About</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#product">products</a></li>
+                    <li><a href="#about">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,14 +38,18 @@
             <a href="#">
                 <img src="./static/image/information-menu.png" alt="">
             </a>
-            <div class="language">
-                <select id="lang" name="lang">
-                    <option value="en" selected hidden>en</option>
-                    <option value="ru">ru</option>
-                </select>
-                <a href="#" class="">
-                    <img src="./static/image/arrow-bottom.svg" alt="">
-                </a>
+            <div class="select">
+                <div class="select__header">
+                    <span class="select__current">en</span>
+                </div>
+                <div class="select__body">
+                    <div class="select__item">
+                        EN
+                    </div>
+                    <div class="select__item">
+                        ru
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -60,8 +67,9 @@
         </div>
         <div class="header-right">
             <div class="header-right__text">
-                Furniture <span>&</span> decor <span class="line_vertical"></span>
+                Furniture <span>&</span> decor
             </div>
+            <span class="line_vertical"></span>
             <a class="header-right__link"><img src="./static/image/header-link.png" alt=""></a>
 
         </div>
@@ -93,7 +101,7 @@
                 <div class="header-slider-item">
                     <div class="header-slider-inner">
                         <div class="slider-word-head">about</div>
-                        <a href="#decor" class="slider-btn">learn more
+                        <a href="#quality" class="slider-btn">learn more
                             <i></i>
                             <span class="icon-right-open-mini"></span>
                         </a>
@@ -102,7 +110,7 @@
                 <div class="header-slider-item">
                     <div class="header-slider-inner">
                         <div class="slider-word-head">products</div>
-                        <a href="" class="slider-btn">learn more
+                        <a href="#product" class="slider-btn">learn more
                             <i></i>
                             <span class="icon-right-open-mini"></span>
                         </a>
@@ -111,7 +119,7 @@
                 <div class="header-slider-item">
                     <div class="header-slider-inner">
                         <div class="slider-word-head">contacs</div>
-                        <a href="" class="slider-btn">learn more
+                        <a href="#about" class="slider-btn">learn more
                             <i></i>
                             <span class="icon-right-open-mini"></span>
                         </a>
@@ -123,148 +131,155 @@
 
 
 </header>
+<main class="content">
+    <section id="product">
+        <div class="content-box" id="furniture">
+            <div class="content-text">
+                <h1 class="content-text__header">furniture</h1>
+                <p class="content-text__paragraph">Wooder utilizes materials otherwise left behind,
+                    rendered useless in their original intent. By creating new pieces made of reclaimed barnwood
 
-<section class="content">
-    <div class="content-box" id="furniture">
-        <div class="content-text">
-            <h2 class="content-text__header">furniture</h2>
-            <p class="content-text__paragraph">Wooder utilizes materials otherwise left behind,
-                rendered useless in their original intent. By creating new pieces made of reclaimed barnwood
-            </p>
-            <a href="#" class="link-more">Learn more <i></i>
-                <span class="icon-right-open-mini"></span>
-            </a>
+                </p>
+                <a href="#" class="link-more">Learn more <i></i>
+                    <span class="icon-right-open-mini"></span>
+                </a>
 
+            </div>
+
+            <div class="content-image">
+                <img src="./static/image/furniture.png" alt="">
+                <span class="content-image__text">furniture</span>
+            </div>
+            <div class="number-section">01<span>.</span>
+                <div class="line_vertical"></div>
+            </div>
         </div>
 
-        <div class="content-image">
-            <img  src="./static/image/furniture.png" alt="">
-            <span class="content-image__text">furniture</span>
+        <div class="content-box" id="decor">
+            <div class="content-image">
+                <img src="./static/image/decor.png" alt="">
+                <span class="content-image__text">decor</span>
+            </div>
+
+            <div class="content-text">
+                <span class="word-bg">d</span>
+                <h2 class="content-text__header">decor</h2>
+                <p class="content-text__paragraph">Wooder utilizes materials otherwise left behind,
+                    rendered useless in their original intent. By creating new pieces made
+                    of reclaimed barnwood
+
+                </p>
+                <a href="#" class="link-more">Learn more <i></i>
+                    <span class="icon-right-open-mini"></span>
+                </a>
+
+            </div>
+            <div class="number-section">02<span>.</span>
+                <div class="line_vertical"></div>
+            </div>
         </div>
-    </div>
-    <div class="number-section">01<span>.</span>
-        <div class="line_vertical"></div>
-    </div>
-    <div class="content-box" id="decor">
-        <div class="content-image">
-            <img src="./static/image/decor.png" alt="">
-            <span class="content-image__text">decor</span>
-        </div>
+    </section>
 
-        <div class="content-text">
-            <span class="word-bg">d</span>
-            <h2 class="content-text__header">decor</h2>
-            <p class="content-text__paragraph">Wooder utilizes materials otherwise left behind,
-                rendered useless in their original intent. By creating new pieces made of reclaimed barnwood
-            </p>
-            <a href="#" class="link-more">Learn more <i></i>
-                <span class="icon-right-open-mini"></span>
-            </a>
-
-        </div>
-
-    </div>
-</section>
-
-<section class="quality">
-    <div class="number-section">02<span>.</span>
-        <div class="line_vertical"></div>
-    </div>
-    <div class="quality-text">
+    <section class="quality" id="quality">
         <h2>wooder – is quality</h2>
-        <p>We create unique design objects made of rare wood,
-            specially under the order. Look at the short video about our work.</p>
-    </div>
-    <div class="quality-video">
-        <div class="video-box">
-            <div class="video-box__circle">
-                <img class='video' src="./static/image/video1.png">
-                <a href="" class="video-arrow">
-                    <img  src="./static/image/arrow-video.png" alt="">
+        <div class="quality-text">
+
+            <p>We create unique design objects made of rare wood,
+                specially under the order. Look at the short video about our work.</p>
+        </div>
+        <div class="quality-video">
+            <div class="video-box">
+                <div class="video-box__circle">
+                    <img class='video' src="./static/image/video1.png">
+                    <a href="" class="video-arrow">
+                        <img src="./static/image/arrow-video.png" alt="">
+                    </a>
+
+                </div>
+                <h3>Innovative design</h3>
+
+            </div>
+            <div class="video-box">
+                <div class="video-box__circle">
+                    <img class='video' src="./static/image/video2.png">
+                    <a href="" class="video-arrow">
+                        <img src="./static/image/arrow-video.png" alt="">
+                    </a>
+                </div>
+                <h3>High-level Skills</h3>
+            </div>
+            <div class="video-box">
+                <div class="video-box__circle">
+                    <img class='video' src="./static/image/video3.png">
+                    <a href="" class="video-arrow">
+                        <img src="./static/image/arrow-video.png" alt="">
+                    </a>
+                </div>
+                <h3>Quality Products</h3>
+
+            </div>
+        </div>
+        <span class="word-bg">V</span>
+    </section>
+
+    <section class="section-video">
+        <div class="video-content">
+            <div class="content-box">
+                <div class="content-text">
+                    <h2>we Do the design of any complexity</h2>
+                    <p>This is a team of professionals that make the furniture and
+                        wood décor high standard. Creating modern designs.
+                        Adhering to the global quality standards. And we are
+                        doing work with love.</p>
+                    <a href="" class="slider-btn">
+                        <img src="./static/image/play-mini.png" alt="">
+                        watch video
+                    </a>
+                </div>
+                <div class="line-vertical"></div>
+            </div>
+        </div>
+        <div class="video-play">
+<!--            <img src="./static/image/btnvideo.png" alt="">-->
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="content-box">
+            <div class="content-image">
+                <img src="./static/image/about.png" alt="">
+                <span class="content-image__text">about</span>
+            </div>
+            <div class="content-text">
+                <h2 class="content-text__header">about</h2>
+                <p class="content-text__paragraph">We are a team of professionals in the wood processing
+                    and the creation of wooden furniture
+                    of the highest class
+                </p>
+                <a href="#" class="link-more">Learn more <i></i>
+                    <span class="icon-right-open-mini"></span>
                 </a>
 
             </div>
-            <h3>Innovative design</h3>
-
-        </div>
-        <div class="video-box">
-            <div class="video-box__circle">
-                <img class='video' src="./static/image/video2.png">
-                <a href="" class="video-arrow">
-                    <img  src="./static/image/arrow-video.png" alt="">
-                </a>
-            </div>
-            <h3>High-level Skills</h3>
-        </div>
-        <div class="video-box">
-            <div class="video-box__circle">
-                <img class='video' src="./static/image/video3.png">
-                <a href="" class="video-arrow">
-                    <img  src="./static/image/arrow-video.png" alt="">
-                </a>
-            </div>
-            <h3>Quality Products</h3>
-
-        </div>
-    </div>
-    <span class="word-bg">V</span>
-</section>
-
-<section class="section-video">
-<div class="video-content">
-    <div class="content-box">
-        <div class="content-text">
-            <h4>we Do the design of any complexity</h4>
-            <p>This is a team of professionals that make the furniture and
-                wood décor high standard. Creating modern designs.
-                Adhering to the global quality standards. And we are
-                doing work with love.</p>
-            <a href="" class="slider-btn">
-                <img src="./static/image/play-mini.png" alt="">
-                watch video
-            </a>
-        </div>
-        <div class="line-vertical"></div>
-    </div>
-</div>
-    <div class="video-play">
-        <img src="./static/image/btnvideo.png" alt="">
-    </div>
-</section>
-
-<section class="about">
-    <div class="content-box">
-        <div class="content-image">
-            <img  src="./static/image/about.png" alt="">
-            <span class="content-image__text">about</span>
-        </div>
-        <div class="content-text">
-            <h2 class="content-text__header">about</h2>
-            <p class="content-text__paragraph">We are a team of professionals in the wood processing
-                and the creation of wooden furniture
-                of the highest class
-            </p>
-            <a href="#" class="link-more">Learn more <i></i>
-                <span class="icon-right-open-mini"></span>
-            </a>
-
-        </div>
 
 
-    </div>
-    <span class="word-bg">A</span>
-</section>
-<footer>
-    <div class="footer-row">
-        <div class="date">© 2019 WOODER</div>
-        <div class="logo">WOODER</div>
-        <div class="design">Designed by <span>Viacheslav Olianishyn</span>
-            <div>Made <span>Natalya Motovilova</span></div>
-        </div>
-    </div>
+                </div>
+                <span class="word-bg">A</span>
+            </section>
 
-</footer>
+            <footer>
+                <div class="footer-row">
+                    <div class="date">© 2019 WOODER</div>
+                    <div class="logo">WOODER</div>
+                    <div class="design">Designed by <span>Viacheslav Olianishyn</span>
+                        <div>Made <span>Natalya Motovilova</span></div>
+                    </div>
+                </div>
+
+            </footer>
+</main>
 </body>
 
 
 <script src="./static/slick/slick.min.js"></script>
+</html>
