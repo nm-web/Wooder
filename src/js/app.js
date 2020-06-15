@@ -40,9 +40,17 @@ $(document).ready(() => {
         });
       };
 
-  $('.header-menu__left').on('click', function () {
-     $('.mobile-menu').toggleClass('is-active');
-    $('.header-menu__center .nav-menu').toggleClass('mobile');
+      function mobileMenu() {
+        $('.mobile-menu').toggleClass('is-active');
+        $('.header-menu__center .nav-menu').toggleClass('mobile');
+      }
+
+  $('.header-menu__left').on('click',  mobileMenu);
+  $('.nav-menu li').on('click',function () {
+
+    if ($('.nav-menu').hasClass('mobile')) {
+      mobileMenu();
+    }
   });
 
   select();

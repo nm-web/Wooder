@@ -22,6 +22,9 @@
     right: 19%;
     left: initial;
     z-index: -1;
+    @media screen and (max-width: 768px){
+      top: -40%;
+    }
   }
 }
 

@@ -6,7 +6,9 @@
   margin-top: 10em;
   position: relative;
   margin-bottom: 9.5em;
-
+  @media screen and (max-width: 640px){
+    margin-bottom: 7em;
+  }
 
 
   .word-bg {
@@ -15,6 +17,9 @@
     left: initial;
     right: 15%;
     z-index: -1;
+    @media screen and (max-width: 640px){
+      top: 100%;
+    }
   }
 
   & h2 {
