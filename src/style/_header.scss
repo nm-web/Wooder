@@ -337,13 +337,19 @@
     }
 
     & .slick-active {
-      list-style-image: url("/static/image/dot-active.svg");
+
+      background: $yellow-text;
 
     }
 
     & li {
-      list-style-image: url("/static/image/dot.svg");
+
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #303030;
       margin-top: 50px;
+      margin-left: -16px;
     }
 
   }
